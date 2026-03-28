@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('blog');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
-
 Route::get('/category', function () {
     return view('category');
 });
