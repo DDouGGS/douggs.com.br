@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +74,9 @@ Route::get('/page', function () {
     return view('page');
 });
 
+// Contatos
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::post('/contact', [ContactController::class, 'telegram']);

@@ -76,16 +76,23 @@
     <!-- ********** Hero Area Start ********** -->
     <div class="hero-area height-400 bg-img background-overlay" style="background-image: url(img/blog-img/bg4.jpg);"></div>
     <!-- ********** Hero Area End ********** -->
-
+    @if(@isset($send) && $send)
+        <section class="contact-area">
+            <div class="alert alert-success" role="alert" style="display: flex; justify-content: center; align-items: center;">
+                Seu e-mail foi enviado com sucesso.
+            </div>
+        </section>
+    @endif
     <section class="contact-area section-padding-100">
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Contact Form Area -->
                 <div class="col-12 col-md-10 col-lg-8">
                     <div class="contact-form">
-                        <h5>Mande-nos uma mensagem por aqui. Que, iremos responder.</h5>
+                        <h5>Mande-nos uma mensagem por aqui. Que, iremos responder o quanto antes.</h5>
                         <!-- Contact Form -->
                         <form action="#" method="post">
+                            @csrf <!-- {{ csrf_field() }} -->
                             <div class="row">
                                 <div class="col-12 col-md-6">
                                     <div class="group">
@@ -115,20 +122,21 @@
                                     <button type="submit" class="btn world-btn">Enviar</button>
                                 </div>
                             </div>
+                            <input type="hidden" id="key" value="47ac10fe8d5c94f8313da424cb8d3c4e">
                         </form>
                     </div>
                 </div>
 
-                                <!-- Contact Form Area -->
+                <!-- Contact Form Area -->
                 <div class="col-12 col-md-10 col-lg-8">
                     <div class="contact-form">
                         <!-- Contact Form -->
-                         <fieldset>
+                        <fieldset>
                             <legend>Outros Contatos</legend>
                             <p>Endereço: <span>Rua Júlio Buono, 2400 - Bloco D - apto. 11</span> - CEP:<span> 02201-002</span> - <span>São Paulo - SP</span></p>
                             <p>Fone:<span> (11) 97580.3656</span></p>
                             <p>Email:<span> mail@douggs.com.br</span></p>
-                         </fieldset>
+                        </fieldset>
                     </div>
                 </div>
             </div>
@@ -149,9 +157,11 @@
                         <a href="#"><img src="{{asset('img/core-img/logo.png')}}" alt=""></a>
                         <div class="copywrite-text mt-30">
                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> 
-<p>Proudly distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                Copyright &copy;<script>
+                                    document.write(new Date().getFullYear());
+                                </script> | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <p>Proudly distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                         </div>
                     </div>
                 </div>
