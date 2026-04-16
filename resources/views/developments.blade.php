@@ -112,6 +112,25 @@
                                         </div>
                                     </div>
 
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post post-style-4 d-flex align-items-center">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="{{ url('/developments/des0003') }}" class="headline">
+                                                <h5>Implementando eventos com o padrão Observers</h5>
+                                            </a>
+                                            <p>O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso ...</p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -148,6 +167,20 @@
                                     </div>
                                 </div>
 
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
+                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
+                                    </div>
+                                    <!-- Post Content -->
+                                    <div class="post-content">
+                                        <a href="{{ url('/developments/des0003') }}" class="headline">
+                                            <h5 class="mb-0">Implementando eventos com o padrão Observers</h5>
+                                        </a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
@@ -168,19 +201,21 @@
                         <div class="sidebar-widget-area">
                             <h5 class="title">Escolha Do Dia</h5>
                             <div class="widget-content">
+
                                 <!-- Single Blog Post -->
                                 <div class="single-blog-post todays-pick">
                                     <!-- Post Thumbnail -->
                                     <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_des0002.png') }}" alt="">
+                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_des0003.png') }}" alt="">
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content px-0 pb-0">
                                         <a href="#" class="headline">
-                                            <h5>Como usar o ReflectionParameter do PHP</h5>
+                                            <h5>Implementando eventos com o padrão Observers</h5>
                                         </a>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
