@@ -2,8 +2,10 @@
 /public/hot
 /public/storage
 /storage/*.key
+/template
 /vendor
-.git env
+.git
+.env
 .env.backup
 .phpunit.result.cache
 docker-compose.override.yml
