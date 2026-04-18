@@ -14,6 +14,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
+// BASE
 Route::get('/', function () {
     return view('blog');
 });
@@ -22,6 +23,21 @@ Route::get('/category', function () {
     return view('category');
 });
 
+Route::get('/single', function () {
+    return view('single');
+});
+
+Route::get('/page', function () {
+    return view('page');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::post('/contact', [ContactController::class, 'telegram']);
+
+// strategies
 Route::get('/strategies', function () {
     return view('strategies');
 });
@@ -30,6 +46,7 @@ Route::get('/strategies/str0001', function () {
     return view('strategies.str0001');
 });
 
+// developments
 Route::get('/developments', function () {
     return view('developments');
 });
@@ -42,6 +59,11 @@ Route::get('/developments/des0002', function () {
     return view('developments.des0002');
 });
 
+Route::get('/developments/des0003', function () {
+    return view('developments.des0003');
+});
+
+// belows
 Route::get('/belows', function () {
     return view('belows');
 });
@@ -50,6 +72,7 @@ Route::get('/belows/bel0001', function () {
     return view('belows.bel0001');
 });
 
+// devops
 Route::get('/devops', function () {
     return view('devops');
 });
@@ -58,6 +81,7 @@ Route::get('/devops/dop0001', function () {
     return view('devops.dop0001');
 });
 
+// consultancies
 Route::get('/consultancies', function () {
     return view('consultancies');
 });
@@ -65,18 +89,3 @@ Route::get('/consultancies', function () {
 Route::get('/consultancies/con0001', function () {
     return view('consultancies.con0001');
 });
-
-Route::get('/single', function () {
-    return view('single');
-});
-
-Route::get('/page', function () {
-    return view('page');
-});
-
-// Contatos
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::post('/contact', [ContactController::class, 'telegram']);
