@@ -85,137 +85,145 @@
                     <div class="page-content">
                         <h1><strong>Implementando eventos com o padrão Observers</strong></h1>
 
-                        <p>O Padrão de Projeto Observer cria um relacionamento de um objeto notificador e muitos objetos que ficam observando-o para receber suas notificações quando o estado deste objeto notificador mudar.
+                        <p>O Padrão de Projeto Observer cria um relacionamento de um objeto notificador e muitos objetos que ficam observando-o para receber suas notificações quando o estado deste objeto mudar.
                         Simplificando, o padrão Observer permite que um objeto notifique outros objetos sobre alterações em seu estado.</p>
-                        <p><img src=":/077cf45bc8ae4315b1abd258226ccdd8" alt="739dc39511544571790b9d6503d91aa8.png">
-                        Diagrama de Classe UML do Padrão de Projeto Observer</p>
-                        <p><strong>O que é um estado de um objeto?</strong> 
-                        Em um objeto normalmente você tem propriedade e métodos. Quando você atribui valores concretos às propriedades, temos um estado. Ou seja, o conjunto de valores dos atributos de um determinado objeto é chamado de estado. O acontecimento de determinado estado, no sistema, pode ser vinculado a um evento ou &#39;Subject&#39;. E, com sua ocorrência os observadores são acionados.</p>
-                        <p><strong>Relação do Subject com os Observers</strong>
-                        Complementando o diagrama UML do padrão Observer, existe uma segunda representação onde conseguimos ver claramente que temos um &#39;Subject&#39;, que conhece um ou muitos Observers e quando o estado do  Subject tiver uma modificação, os Observers serão notificados (executados). </p>
-                        <p><img src=":/e91a63321f1745618d755ae3a495ed81" alt="2db075c2495b0a3f2d97be036a968d78.png">
-                        Diagrama com a Relação do Subject com os Observers</p>
+                        
+                        <!-- <img src="{{ asset('img/blog-img/e91a63321f1745618d755ae3a495ed81.png') }}" alt=""> -->
+
+                        <h6><strong>O que é um estado de um objeto?</strong></h6>
+                        <p>Em um objeto normalmente você tem propriedade e métodos. Quando você atribui valores concretos às propriedades, temos um estado. Ou seja, o conjunto de valores dos atributos de um determinado objeto é chamado de estado. O acontecimento de determinado estado, no sistema, pode ser vinculado a um evento ou &#39;Subject&#39;. E, com sua ocorrência os observadores são acionados.</p>
+                        
+                        <h6><strong>Relação do Subject com os Observers</strong></h6>
+                        <p>Complementando o diagrama UML do padrão Observer, existe uma segunda representação onde conseguimos ver claramente que temos um &#39;Subject&#39;, que conhece um ou muitos Observers e quando o estado do  Subject tiver uma modificação, os Observers serão notificados (executados). </p>
+                        
+                        <!-- <img src="{{ asset('img/blog-img/077cf45bc8ae4315b1abd258226ccdd8.png') }}" alt=""> -->
+
                         <p>Um exemplo muito bom para para você compreender o uso padrão Observer, são as ações de inscrições do Youtube. Quando você se inscreve, você e os demais inscritos se tornam Observers e o Youtube o Subject. A cada vídeo novo (mudança de estado), vocês são notificados automaticamente.</p>
-                        <p>Muitos sistemas se utilizam desse padrão para, automaticamente, ficarem observando o acontecimentodo estado, na esperança de receberem a notificação. Caso onde o padrão é utilizado em larga escala.</p>
+                        <p>Muitos sistemas se utilizam desse padrão para, automaticamente, ficarem observando o acontecimentodo nos estados, na esperança de receberem uma notificação e onde o padrão é utilizado em larga escala.</p>
                         <p>A biblioteca Standard PHP Library(SPL) do PHP tem as interfaces para Subject (SplSubject) e Observer (SplObserver) que podemos utilizar normalmente. Essa biblioteca realmente tem muitos recursos úteis.</p>
+                        
+                        <h6><strong>Exemplo prático</strong></h6>
                         <p>Primeiro vamos criar nossos Value Objects para representar o Video e os Assinantes. Só uma observação. No momento em que formos criar um Vídeo, nós não vamos precisar trocar seu título em tempo de execução, com isso, para passar novos conceitos, vou definir sua propriedade como Readonly ou seja propriedade somente leitura, recurso do PHP 8.1 (Readonly Properties). </p>
                         <pre><code class="language-php">&lt;?php
-                            declare(strict_types=1);
-                            namespace Growthdev\DesignPatterns\Behavioral\Observer;
-                            final class Video
-                            {
-                                public readonly string $title;
-                                public function __construct(string $title)
-                                {
-                                    $this-&gt;title = $title;
-                                }
-                            }
+declare(strict_types=1);
+namespace Growthdev\DesignPatterns\Behavioral\Observer;
+final class Video
+{
+    public readonly string $title;
+    public function __construct(string $title)
+    {
+        $this-&gt;title = $title;
+    }
+}
                         </code></pre>
                         <p>Vou aproveitar o exemplo e passar mais um novo recurso. O PHP também permite que você declare diretamente uma propriedade na assinatura do construtor, ao invés da declaração explicita como propriedade, assim como fizemos na classe Video.</p>
                         <pre><code class="language-php">&lt;?php
-                            declare(strict_types=1);
-                            namespace Growthdev\DesignPatterns\Behavioral\Observer;
-                            final class Subscriber
-                            {
-                                public function __construct(
-                                    public readonly string $email
-                                ) {}
-                            }
+declare(strict_types=1);
+namespace Growthdev\DesignPatterns\Behavioral\Observer;
+final class Subscriber
+{
+    public function __construct(
+        public readonly string $email
+    ) {}
+}
                         </code></pre>
                         <p>Agora vamos criar o nosso objeto “observável” que terá seu estado observado. Vamos utilizar o SplObjecrStorage para construir nossa coleção de objetos observers.</p>
                         <pre><code class="language-php">&lt;?php
-                            declare(strict_types=1);
-                            namespace Growthdev\DesignPatterns\Behavioral\Observer;
-                            use SplObjectStorage;
-                            use SplObserver;
-                            use SplSubject;
-                            final class VideoObservable implements SplSubject
-                            {   
-                                public readonly Video $video;
-                                private SplObjectStorage $observers;
-                                public function __construct(Video $video)
-                                {
-                                    $this-&gt;video = $video;
-                                    $this-&gt;observers = new SplObjectStorage();  
-                                }
-                                public function attach(SplObserver $observer): void
-                                {
-                                    $this-&gt;observers-&gt;attach($observer);
-                                }
-                                public function detach(SplObserver $observer): void
-                                {
-                                    $this-&gt;observers-&gt;detach($observer);
-                                }
-                                public function notify(): void
-                                {
-                                    foreach ($this-&gt;observers as $observer) {
-                                        $observer-&gt;update($this);
-                                    }
-                                }    
-                            }
+declare(strict_types=1);
+namespace Growthdev\DesignPatterns\Behavioral\Observer;
+use SplObjectStorage;
+use SplObserver;
+use SplSubject;
+final class VideoObservable implements SplSubject
+{   
+    public readonly Video $video;
+    private SplObjectStorage $observers;
+    public function __construct(Video $video)
+    {
+        $this-&gt;video = $video;
+        $this-&gt;observers = new SplObjectStorage();  
+    }
+
+    public function attach(SplObserver $observer): void
+    {
+        $this-&gt;observers-&gt;attach($observer);
+    }
+
+    public function detach(SplObserver $observer): void
+    {
+        $this-&gt;observers-&gt;detach($observer);
+    }
+
+    public function notify(): void
+    {
+        foreach ($this-&gt;observers as $observer) {
+            $observer-&gt;update($this);
+        }
+    }    
+}
                         </code></pre>
                         <p>Por fim vamos criar a classe para representar os nossos Observers</p>
                         <pre><code class="language-php">&lt;?php
-                            declare(strict_types=1);
-                            namespace Growthdev\DesignPatterns\Behavioral\Observer;
-                            use SplObserver;
-                            use SplSubject;
-                            class VideoObserver implements SplObserver
-                            {
-                                private Subscriber $subscriber;
-                                public function __construct(Subscriber $subscriber)
-                                {
-                                    $this-&gt;subscriber = $subscriber;
-                                }
-                                public function update(SplSubject $subject): void
-                                {
-                                printf(
-                                    &quot;%s has been notified of \&quot;%s\&quot;\n&quot;, 
-                                        $this-&gt;subscriber-&gt;email, 
-                                        $subject-&gt;video-&gt;title
-                                    );
-                                }
-                            }
+declare(strict_types=1);
+namespace Growthdev\DesignPatterns\Behavioral\Observer;
+use SplObserver;
+use SplSubject;
+class VideoObserver implements SplObserver
+{
+    private Subscriber $subscriber;
+    public function __construct(Subscriber $subscriber)
+    {
+        $this-&gt;subscriber = $subscriber;
+    }
+
+    public function update(SplSubject $subject): void
+    {
+        printf(
+            &quot;%s has been notified of \&quot;%s\&quot;\n&quot;, 
+            $this-&gt;subscriber-&gt;email, 
+            $subject-&gt;video-&gt;title
+        );
+    }
+}
                         </code></pre>
                         <p>Na implementação do teste, você conseguirá mesclar todos os recursos e compreender claramente a relação entre Subject e os Observers. Você tem o objeto Video, que se torna observável através do VideoObservable e você tem o observer, VideoObserver que está atrelado a alguma pessoa inscrita, Subscriber. Com isso, o VideoObservable cria uma estrutura contendo todos os Observers e pode tanto adicionar quanto remover. E no momento em que ele disparar a notificação, método notity, todos os Observers recebem a mensagem, exceto os removidos.</p>
                         <pre><code class="language-php">&lt;?php
-                            declare(strict_types=1);
-                            namespace Growthdev\DesignPatterns\Tests\Behavioral\Observer;
-                            use Growthdev\DesignPatterns\Behavioral\Observer\Video;
-                            use Growthdev\DesignPatterns\Behavioral\Observer\Subscriber;
-                            use Growthdev\DesignPatterns\Behavioral\Observer\VideoObservable;
-                            use Growthdev\DesignPatterns\Behavioral\Observer\VideoObserver;
-                            use PHPUnit\Framework\TestCase;
-                            final class VideoObservableTest extends TestCase
-                            {
-                                public function testShouldCreateVideoObservers(): void
-                                {
-                                    $video = new Video(&#39;Video: Create Obsever Pattern&#39;);
-                                    
-                                    $anaObserver = new VideoObserver(new Subscriber(&#39;ana@email.com.br&#39;));
-                                    $mariaObserver = new VideoObserver(new Subscriber(&#39;maria@email.com.br&#39;));
-                                    $walmirObserver = new VideoObserver(new Subscriber(&#39;walmir@email.com.br&#39;));
-                                    $joaoObserver = new VideoObserver(new Subscriber(&#39;joao@email.com.br&#39;));
-                                    $videoObservable = new VideoObservable($video);
-                                    $videoObservable-&gt;attach($anaObserver);
-                                    $videoObservable-&gt;attach($mariaObserver);
-                                    $videoObservable-&gt;attach($walmirObserver);
-                                    $videoObservable-&gt;attach($joaoObserver);
-                                    // remove observer from list
-                                    $videoObservable-&gt;detach($mariaObserver);
-                                    $videoObservable-&gt;notify();
-                                    $this-&gt;expectOutputString(
-                                        &quot;ana@email.com.br has been notified of \&quot;Video: Create Obsever Pattern\&quot;\n&quot;
-                                        . &quot;walmir@email.com.br has been notified of \&quot;Video: Create Obsever Pattern\&quot;\n&quot;
-                                        . &quot;joao@email.com.br has been notified of \&quot;Video: Create Obsever Pattern\&quot;\n&quot;
-                                    );
-                                }
-                            }
+declare(strict_types=1);
+namespace Growthdev\DesignPatterns\Tests\Behavioral\Observer;
+use Growthdev\DesignPatterns\Behavioral\Observer\Video;
+use Growthdev\DesignPatterns\Behavioral\Observer\Subscriber;
+use Growthdev\DesignPatterns\Behavioral\Observer\VideoObservable;
+use Growthdev\DesignPatterns\Behavioral\Observer\VideoObserver;
+use PHPUnit\Framework\TestCase;
+final class VideoObservableTest extends TestCase
+{
+    public function testShouldCreateVideoObservers(): void
+    {
+        $video = new Video(&#39;Video: Create Obsever Pattern&#39;);
+
+        $anaObserver = new VideoObserver(new Subscriber(&#39;ana@email.com.br&#39;));
+        $mariaObserver = new VideoObserver(new Subscriber(&#39;maria@email.com.br&#39;));
+        $walmirObserver = new VideoObserver(new Subscriber(&#39;walmir@email.com.br&#39;));
+        $joaoObserver = new VideoObserver(new Subscriber(&#39;joao@email.com.br&#39;));
+        $videoObservable = new VideoObservable($video);
+        $videoObservable-&gt;attach($anaObserver);
+        $videoObservable-&gt;attach($mariaObserver);
+        $videoObservable-&gt;attach($walmirObserver);
+        $videoObservable-&gt;attach($joaoObserver);
+        // remove observer from list
+        $videoObservable-&gt;detach($mariaObserver);
+        $videoObservable-&gt;notify();
+        $this-&gt;expectOutputString(
+            &quot;ana@email.com.br has been notified of \&quot;Video: Create Obsever Pattern\&quot;\n&quot;
+            . &quot;walmir@email.com.br has been notified of \&quot;Video: Create Obsever Pattern\&quot;\n&quot;
+            . &quot;joao@email.com.br has been notified of \&quot;Video: Create Obsever Pattern\&quot;\n&quot;
+        );
+    }
+}
                         </code></pre>
-                        <p><img src=":/9f50ce019b9a4b78af36b94c455ef2f9" alt="c94dcf86a19791d8c50f3daa735cf105.png">
-                            Resultado dos testes de uso do Padrão Observer
-                            Quando usar o padrão Observer?
-                            Toda vez que você tiver um objeto, que a modificação do seu estado implicará modificações em outro. Ou seja, quando um objeto tem a necessidade de notificar outros objetos sobre a mudança do seu estado.</p>
+
+                        <h6><strong>Então, quando usar o padrão Observer?</strong></h6>
+                        <p>Toda vez que você tiver um objeto, que a modificação do seu estado implicará modificações em outro. Ou seja, quando um objeto tem a necessidade de notificar outros objetos sobre a mudança do seu estado.</p>
                         <p>O Padrão de Projeto Observer tem um baixo acoplamento. Ou seja, por mais que ele tenha uma relação de 1 para “n” objetos,  ele  encapsula os aspectos separadamente. Com isso, permite-se a reutilização independente dos objetos.</p>
 
                         <!-- Post Meta -->
