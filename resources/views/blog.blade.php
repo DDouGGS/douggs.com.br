@@ -100,7 +100,7 @@
                                     <p>1</p>
                                 </div>
                                 <div class="post-title">
-                                    <a href="{{ url('/developments/des0002') }}">Como usar o ReflectionParameter do PHP</a>
+                                    <a href="{{ url('/blogs/developments/des0002') }}">Como usar o ReflectionParameter do PHP</a>
                                 </div>
                             </div>
                             <!-- Single Slide -->
@@ -109,7 +109,7 @@
                                     <p>2</p>
                                 </div>
                                 <div class="post-title">
-                                    <a href="{{ url('/developments/des0003') }}">Implementando eventos com o padrão Observers</a>
+                                    <a href="{{ url('/blogs/developments/des0003') }}">Implementando eventos com o padrão Observers</a>
                                 </div>
                             </div>
                             <!-- Single Slide -->
@@ -118,7 +118,7 @@
                                     <p>3</p>
                                 </div>
                                 <div class="post-title">
-                                    <a href="{{ url('/developments/des0002') }}">Como usar o ReflectionParameter do PHP</a>
+                                    <a href="{{ url('/blogs/strategies/str0003') }}">Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</a>
                                 </div>
                             </div>
                             <!-- Single Slide -->
@@ -127,7 +127,7 @@
                                     <p>4</p>
                                 </div>
                                 <div class="post-title">
-                                    <a href="{{ url('/developments/des0003') }}">Implementando eventos com o padrão Observers</a>
+                                    <a href="{{ url('/blogs/developments/des0003') }}">Implementando eventos com o padrão Observers</a>
                                 </div>
                             </div>
                         </div>
@@ -168,13 +168,13 @@
                                                     </div>
                                                     <!-- Post Content -->
                                                     <div class="post-content">
-                                                        <a href="{{ url('/developments/des0002') }}" class="headline">
+                                                        <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
                                                             <h5>Como usar o ReflectionParameter do PHP</h5>
                                                         </a>
                                                         <p>As classes Refletion... do PHP capacitam na geração automática de função a partir do conhecimento dos seus parâmetros ...</p>
                                                         <!-- Post Meta -->
                                                         <div class="post-meta">
-                                                            <p><a href="{{ url('/developments/des0002') }}" class="post-author">Douglas G. Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                                            <p><a href="{{ url('/blogs/developments/des0002') }}" class="post-author">Douglas G. Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -189,13 +189,34 @@
                                                     </div>
                                                     <!-- Post Content -->
                                                     <div class="post-content">
-                                                        <a href="{{ url('/developments/des0003') }}" class="headline">
+                                                        <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
                                                             <h5>Implementando eventos com o padrão Observers</h5>
                                                         </a>
                                                         <p>O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso ...</p>
                                                         <!-- Post Meta -->
                                                         <div class="post-meta">
-                                                            <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
+                                                            <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Single Blog Post -->
+                                                <div class="single-blog-post">
+                                                    <!-- Post Thumbnail -->
+                                                    <div class="post-thumbnail">
+                                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_str0003.png') }}" alt="">
+                                                        <!-- Catagory -->
+                                                        <div class="post-cta"><a href="{{ url('/strategies') }}">Estratégias</a></div>
+                                                    </div>
+                                                    <!-- Post Content -->
+                                                    <div class="post-content">
+                                                        <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
+                                                            <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
+                                                        </a>
+                                                        <p>Além de facilitar o desenvolvimento um sistema de linguagem pode simplificar o trato com vários tipos de textos dentro no desenvolvimento ...</p>
+                                                        <!-- Post Meta -->
+                                                        <div class="post-meta">
+                                                            <p><a href="{{ url('/blogs/strategies/str0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Maio 14, 2026 at 20:15 pm</a></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -227,170 +248,176 @@
                                                 
                                                 <!-- ========= Single Catagory Slide ========= -->
                                                 <div class="single-cata-slide">
-                                                    
                                                     <div class="row">
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0002') }}" class="headline">
-                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0002') }}" class="headline">
-                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0002') }}" class="headline">
-                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0002') }}" class="headline">
-                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
+                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
+                                                                        <h5>Implementando eventos com o padrão Observers</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
+                                                                        <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/strategies/str0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Maio 14, 2026 at 20:15 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
+                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
                                                 </div>
 
                                                 <!-- ========= Single Catagory Slide ========= -->
                                                 <div class="single-cata-slide">
-                                                    
                                                     <div class="row">
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0003') }}" class="headline">
-                                                                        <h5>Implementando eventos com o padrão Observers</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0003') }}" class="headline">
-                                                                        <h5>Implementando eventos com o padrão Observers</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0003') }}" class="headline">
-                                                                        <h5>Implementando eventos com o padrão Observers</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-md-6">
-                                                            <!-- Single Blog Post -->
-                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
-                                                                <!-- Post Thumbnail -->
-                                                                <div class="post-thumbnail">
-                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
-                                                                </div>
-                                                                <!-- Post Content -->
-                                                                <div class="post-content">
-                                                                    <a href="{{ url('/developments/des0003') }}" class="headline">
-                                                                        <h5>Implementando eventos com o padrão Observers</h5>
-                                                                    </a>
-                                                                    <!-- Post Meta -->
-                                                                    <div class="post-meta">
-                                                                        <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
+                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
+                                                                        <h5>Implementando eventos com o padrão Observers</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
+                                                                        <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/strategies/str0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Maio 14, 2026 at 20:15 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6">
+                                                            <!-- Single Blog Post -->
+                                                            <div class="single-blog-post post-style-2 d-flex align-items-center mb-1">
+                                                                <!-- Post Thumbnail -->
+                                                                <div class="post-thumbnail">
+                                                                    <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
+                                                                </div>
+                                                                <!-- Post Content -->
+                                                                <div class="post-content">
+                                                                    <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
+                                                                        <h5>Como usar o ReflectionParameter do PHP</h5>
+                                                                    </a>
+                                                                    <!-- Post Meta -->
+                                                                    <div class="post-meta">
+                                                                        <p><a href="{{ url('/blogs/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -426,6 +453,20 @@
                                 <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
                                     <!-- Post Thumbnail -->
                                     <div class="post-thumbnail">
+                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
+                                    </div>
+                                    <!-- Post Content -->
+                                    <div class="post-content">
+                                        <a href="{{ url('/strategies/str0003') }}" class="headline">
+                                            <h5 class="mb-0">Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
+                                    <!-- Post Thumbnail -->
+                                    <div class="post-thumbnail">
                                         <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
                                     </div>
                                     <!-- Post Content -->
@@ -444,7 +485,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="{{ url('/developments/des0003') }}" class="headline">
+                                        <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
                                             <h5 class="mb-0">Implementando eventos com o padrão Observers</h5>
                                         </a>
                                     </div>
@@ -475,16 +516,16 @@
                                 <div class="single-blog-post todays-pick">
                                     <!-- Post Thumbnail -->
                                     <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_des0003.png') }}" alt="">
+                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_str0003.png') }}" alt="">
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content px-0 pb-0">
-                                        <a href="{{ url('/developments/des0003') }}" class="headline">
-                                            <h5>Implementando eventos com o padrão Observers</h5>
+                                        <a href="{{ url('/strategies/str0003') }}" class="headline">
+                                            <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
                                         </a>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -503,17 +544,36 @@
                         <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
                             <!-- Post Thumbnail -->
                             <div class="post-thumbnail">
+                                <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
+                            </div>
+                            <!-- Post Content -->
+                            <div class="post-content">
+                                <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
+                                    <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
+                                </a>
+                                <p>Além de facilitar o desenvolvimento um sistema de linguagem pode simplificar o trato com vários tipos de textos dentro no desenvolvimento ...</p>
+                                <!-- Post Meta -->
+                                <div class="post-meta">
+                                    <p><a href="{{ url('/blogs/strategies/str0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Maio 14, 2026 at 20:15 pm</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
+                            <!-- Post Thumbnail -->
+                            <div class="post-thumbnail">
                                 <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
                             </div>
                             <!-- Post Content -->
                             <div class="post-content">
-                                <a href="#" class="headline">
+                                <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
                                     <h5>Implementando eventos com o padrão Observers</h5>
                                 </a>
                                 <p>O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso ...</p>
                                 <!-- Post Meta -->
                                 <div class="post-meta">
-                                    <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
+                                    <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
                                 </div>
                             </div>
                         </div>
