@@ -9,13 +9,14 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>DougGS TI - &amp; Categoria</title>
+    <title>DougGS TI - &amp; Estratégias</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
 
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
 </head>
 
 <body>
@@ -46,14 +47,14 @@
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias</a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ url('/strategies') }}">Estratégias</a>
                                         <a class="dropdown-item" href="{{ url('/developments') }}">Desenvolvimentos</a>
+                                        <a class="dropdown-item" href="{{ url('/belows') }}">Infraetruturas</a>
                                         <a class="dropdown-item" href="{{ url('/devops') }}">DevOps</a>
                                         <a class="dropdown-item" href="{{ url('/consultancies') }}">Consultorias</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ url('/contact') }}">Contatos</a>
+                                    <a class="nav-link" href="{{ url('/contact') }}">Contato</a>
                                 </li>
                             </ul>
                             <!-- Search Form  -->
@@ -73,108 +74,21 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ********** Hero Area Start ********** -->
-    <div class="hero-area height-400 bg-img background-overlay" style="background-image: url(img/blog-img/bg3.jpg);"></div>
+    <div class="hero-area height-400 bg-img background-overlay" style="background-image: url({{asset('img/blog-img/blog_douggs_img_category_str0003.png')}});"></div>
     <!-- ********** Hero Area End ********** -->
 
-    <div class="main-content-wrapper section-padding-100">
+    <div class="regular-page-wrap section-padding-100">
         <div class="container">
             <div class="row justify-content-center">
-                <!-- ============= Post Content Area Start ============= -->
-                <div class="col-12 col-lg-8">
-                    <div class="post-content-area mb-100">
-                        <!-- Catagory Area -->
-                        <div class="world-catagory-area">
-                            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="title">Infraestruturas</li>
-                            </ul>
-
-                            <div class="tab-content" id="myTabContent">
-
-                                <div class="tab-pane fade show active" id="world-tab-1" role="tabpanel" aria-labelledby="tab1">
-                                    
-                                    <!-- Single Blog Post -->
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ========== Sidebar Area ========== -->
-                <div class="col-12 col-md-8 col-lg-4">
-                    <div class="post-sidebar-area">
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Aqui Tem</h5>
-                            <div class="widget-content">
-                                <p>Por vezes, no que diz respeito à Infraestrutura, é preciso tentar enxergar com uma clareza melhor quanto ao que deve ser utilizado para um desenvolvimento expecífico, ou para compreender a vantagem do que há de novo.</p>
-                            </div>
-                        </div>
-
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Em Alta</h5>
-                            <div class="widget-content">
-                                
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
-                                            <h5 class="mb-0">Como usar o ReflectionParameter do PHP</h5>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Fique Ligado</h5>
-                            <div class="widget-content">
-                                <div class="social-area d-flex justify-content-between">
-                                    <a href="https://www.facebook.com/ti.douggs"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/douglas.gsouza/"><i class="fa fa-instagram"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCNeHQB_iUNs4wiXHeeDx5bw"><i class="fa fa-google"></i></a>
-                                    <a href="https://www.linkedin.com/company/dougg-ti"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Escolha Do Dia</h5>
-                            <div class="widget-content">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post todays-pick">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_des0002.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content px-0 pb-0">
-                                        <a href="#" class="headline">
-                                            <h5>Como usar o ReflectionParameter do PHP</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Load More btn -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="load-more-btn mt-50 text-center">
-                        <a href="#" class="btn world-btn">Load More</a>
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="page-content">
+                        <h1>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h1>
+                        <p>Quando precisamos realizar um desenvolvimento, seja ele embarcado, mobile ou outro tipo. Somos confrontado com as linguagens de diferentes países. Já, que precisamos pensar em como as pessoas vão entender o que deve ser feito no sistema e conseguir obter algum benefícios com ele.</p>
+                        <p>Nisso, começamos a dar valor à possibilidade de podermos alterar a linguagem a qualquer momento.</p>
+                        <p>E, ainda, devemos acrescentar à importância de um sistema de linguagem. o fato que boa parte do desenvolvimento se utiliza de constantes de textos. Pois, se olharmos bem para o desenvolvimento mobile, por exemplo, veremos que a porcentagem de constantes de textos, muitas vezes, ultrapassa os 50% de todo desenvolvimento, com facilidade. Tornando, o uso de um sistema de linguagem ainda mais importante para a guarda dessas informações de forma organizada e eficaz no desenvolvimento em si</p>
+                        <p>É, nesse cenário, que aconteceu a iniciativa de criar uma biblioteca Dart, como um sistema de linguagem no Flutter, que facilita a formação da linguagem no mobile, ao mesmo tempo que contribui com o seu desenvolvimento. Assim, no dia 27 de abril de 2026, publiquei a primeira versão da System Language - Dart, no repositório pub.dev.</p>
+                        <p>O projeto, ainda deve crescer afim de conseguir acomodar uma quantidade indefinida de dicionários, inclusive de linguas cuja a mudança da fonte também é relevância, como é o caso do japonês, do coreano e do russo.</p>
+                        <p>Mas, ele está a caminho e já iniciou sua jornada.</p>
                     </div>
                 </div>
             </div>

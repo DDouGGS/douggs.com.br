@@ -85,7 +85,7 @@
                         <!-- Catagory Area -->
                         <div class="world-catagory-area">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="title">Estratégias</li>
+                                <li class="title">Desenvolvimentos</li>
                             </ul>
 
                             <div class="tab-content" id="myTabContent">
@@ -93,6 +93,23 @@
                                 <div class="tab-pane fade show active" id="world-tab-1" role="tabpanel" aria-labelledby="tab1">
                                     
                                     <!-- Single Blog Post -->
+                                    <div class="single-blog-post post-style-4 d-flex align-items-center">
+                                        <!-- Post Thumbnail -->
+                                        <div class="post-thumbnail">
+                                            <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
+                                        </div>
+                                        <!-- Post Content -->
+                                        <div class="post-content">
+                                            <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
+                                                <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
+                                            </a>
+                                            <p>Além de facilitar o desenvolvimento um sistema de linguagem pode simplificar o trato com vários tipos de textos dentro no desenvolvimento ...</p>
+                                            <!-- Post Meta -->
+                                            <div class="post-meta">
+                                                <p><a href="{{ url('/blogs/strategies/str0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Maio 14, 2026 at 20:15 pm</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
@@ -120,12 +137,12 @@
                                 <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
                                     <!-- Post Thumbnail -->
                                     <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
+                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="{{ url('/developments/des0002') }}" class="headline">
-                                            <h5 class="mb-0">Como usar o ReflectionParameter do PHP</h5>
+                                        <a href="{{ url('/developments/str0003') }}" class="headline">
+                                            <h5 class="mb-0">Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
                                         </a>
                                     </div>
                                 </div>
@@ -154,12 +171,12 @@
                                 <div class="single-blog-post todays-pick">
                                     <!-- Post Thumbnail -->
                                     <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_des0002.png') }}" alt="">
+                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_str0003.png') }}" alt="">
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content px-0 pb-0">
                                         <a href="#" class="headline">
-                                            <h5>Como usar o ReflectionParameter do PHP</h5>
+                                            <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
                                         </a>
                                     </div>
                                 </div>

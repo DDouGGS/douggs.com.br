@@ -101,13 +101,13 @@
                                         </div>
                                         <!-- Post Content -->
                                         <div class="post-content">
-                                            <a href="{{ url('/developments/des0002') }}" class="headline">
+                                            <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
                                                 <h5>Como usar o ReflectionParameter do PHP</h5>
                                             </a>
                                             <p>As classes Refletion... do PHP capacitam na geração automática de função a partir do conhecimento dos seus parâmetros ...</p>
                                             <!-- Post Meta -->
                                             <div class="post-meta">
-                                                <p><a href="{{ url('/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                                <p><a href="{{ url('/blogs/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -120,13 +120,13 @@
                                         </div>
                                         <!-- Post Content -->
                                         <div class="post-content">
-                                            <a href="{{ url('/developments/des0003') }}" class="headline">
+                                            <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
                                                 <h5>Implementando eventos com o padrão Observers</h5>
                                             </a>
                                             <p>O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso ...</p>
                                             <!-- Post Meta -->
                                             <div class="post-meta">
-                                                <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
+                                                <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -161,7 +161,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="{{ url('/developments/des0002') }}" class="headline">
+                                        <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
                                             <h5 class="mb-0">Como usar o ReflectionParameter do PHP</h5>
                                         </a>
                                     </div>
@@ -175,7 +175,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="{{ url('/developments/des0003') }}" class="headline">
+                                        <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
                                             <h5 class="mb-0">Implementando eventos com o padrão Observers</h5>
                                         </a>
                                     </div>
