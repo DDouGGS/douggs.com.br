@@ -228,7 +228,7 @@ final class VideoObservableTest extends TestCase
 
                         <!-- Post Meta -->
                         <div class="post-meta">
-                            <p><a href="{{ url('/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
+                            <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
                         </div>
                     </div>
                 </div>

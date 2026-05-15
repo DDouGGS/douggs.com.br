@@ -124,7 +124,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="{{ url('/developments/des0002') }}" class="headline">
+                                        <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
                                             <h5 class="mb-0">Como usar o ReflectionParameter do PHP</h5>
                                         </a>
                                     </div>
