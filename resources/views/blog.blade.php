@@ -457,7 +457,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content">
-                                        <a href="{{ url('/strategies/str0003') }}" class="headline">
+                                        <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
                                             <h5 class="mb-0">Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
                                         </a>
                                     </div>
@@ -520,7 +520,7 @@
                                     </div>
                                     <!-- Post Content -->
                                     <div class="post-content px-0 pb-0">
-                                        <a href="{{ url('/strategies/str0003') }}" class="headline">
+                                        <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
                                             <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
                                         </a>
                                     </div>
