@@ -28,7 +28,7 @@
     <!-- Preloader End -->
 
     <!-- ***** Header Area Start ***** -->
-    @include('partials.header')
+    @include('partials.header', ['category' => 'category'])
     <!-- ***** Header Area End ***** -->
 
     <!-- ********** Hero Area Start ********** -->
