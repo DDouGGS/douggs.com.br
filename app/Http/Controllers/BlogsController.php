@@ -11,4 +11,10 @@ class BlogsController extends Controller
     {
         return view($category . '.' . $page);
     }
+
+    // Responde a Categoria
+    public function categorys(Request $request, $categorys)
+    {
+        return view('categorys.' . $categorys);
+    }
 }
