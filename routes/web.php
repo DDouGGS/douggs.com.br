@@ -26,30 +26,8 @@ Route::get('/contact', function () {
 
 Route::post('/contact', [ContactController::class, 'telegram']);
 
-// Estratégias
-Route::get('/strategies', function () {
-    return view('strategies');
-});
-
-// Desenvolvimento
-Route::get('/developments', function () {
-    return view('developments');
-});
-
-// Infraestrutura
-Route::get('/belows', function () {
-    return view('belows');
-});
-
-// DevOps
-Route::get('/devops', function () {
-    return view('devops');
-});
-
-// consultancies
-Route::get('/consultancies', function () {
-    return view('consultancies');
-});
-
 // Blogs
 Route::get('/blogs/{category}/{page}', [BlogsController::class, 'page']);
+
+// Blogs
+Route::get('/blogs/{categorys}', [BlogsController::class, 'categorys']);

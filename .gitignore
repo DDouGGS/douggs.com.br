@@ -13,8 +13,15 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+# php-storm
 /.idea
+# vscode
 /.vscode
 *.code-workspace
+# composer
 composer.json
 composer.lock
+#docker
+docker-compose.yml
+docker/
+Dockerfile
