@@ -5,23 +5,23 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class History extends Model
 {
     use HasFactory;
 
-    // table
-    protected $table = 'users';
+    // tabela
+    protected $table = 'histories';
 
     // chave primária
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'history_id';
 
     // preenchivel
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'ddd',
-        'phone',
+        'user_id',
+        'content',
+        'paragraph',
+        'chapter',
+        'book',
         'active'
     ];
 }

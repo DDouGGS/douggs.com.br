@@ -5,23 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Service extends Model
 {
     use HasFactory;
 
-    // table
-    protected $table = 'users';
+    // tabela
+    protected $table = 'services';
 
     // chave primária
-    protected $primaryKey = 'user_id';
+    protected $primaryKey = 'service_id';
 
     // preenchivel
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'ddd',
-        'phone',
+        'service_code',
+        'group',
+        'description',
         'active'
     ];
 }
