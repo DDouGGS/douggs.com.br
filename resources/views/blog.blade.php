@@ -184,34 +184,24 @@
                                 </ul>
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s" style="">
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
-                                            <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
-                                        </a>
-                                        <p>Além de facilitar o desenvolvimento um sistema de linguagem pode simplificar o trato com vários tipos de textos dentro no desenvolvimento ...</p>
-                                        <!-- Post Meta -->
-                                        <div class="post-meta">
-                                            <p><a href="{{ url('/blogs/strategies/str0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Maio 14, 2026 at 20:15 pm</a></p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @include('partials.single_blog_post_5',[
+                                'title' => 'Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart',
+                                'shortText' => 'Além de facilitar o desenvolvimento um sistema de linguagem pode simplificar o trato com vários tipos de textos dentro no desenvolvimento',
+                                'img' => asset('img/blog-img/blog_douggs_img_carrossel_str0003.png'),
+                                'author' => 'Douglas G. De Souza',
+                                'datePost' => 'Maio 14, 2026 at 20:15 pm',
+                                'href' => url('/blogs/strategies/str0003')
+                                ])
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s" style="">
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
-                                            <h5>Implementando eventos com o padrão Observers</h5>
-                                        </a>
-                                        <p>O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso ...</p>
-                                        <!-- Post Meta -->
-                                        <div class="post-meta">
-                                            <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mai 15, 2026 at 19:15 pm</a></p>
-                                        </div>
-                                    </div>
-                                </div>
+                                @include('partials.single_blog_post_5',[
+                                'title' => 'Implementando eventos com o padrão Observers',
+                                'shortText' => 'O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso',
+                                'img' => asset('img/blog-img/blog_douggs_img_carrossel_des0003.png'),
+                                'author' => 'Douglas G. De Souza',
+                                'datePost' => 'Mar 21, 2026 at 21:35 pm',
+                                'href' => url('/blogs/developments/des0003')
+                                ])
 
                             </div>
 
