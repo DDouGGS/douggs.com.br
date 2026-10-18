@@ -1,23 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-     @include('partials.title', ['title' => 'Desenvolvimentos'])
-    <!-- Title  -->
-
-    <!-- Favicon  -->
-    <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-</head>
+<!-- ***** Head Area Start ***** -->
+@include('partials.head', ['title' => 'DougGS TI - Desenvolvimentos'])
+<!-- ***** Head Area End ***** -->
 
 <body>
     <!-- Preloader Start -->
@@ -33,7 +19,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ********** Hero Area Start ********** -->
-    <div class="hero-area height-400 bg-img background-overlay" style="background-image: url('/img/blog-img/blog_douggs_img_category_01.png');"></div>
+    @include('partials.hero',['img' => '/img/blog-img/blog_douggs_img_category_01.png'])
     <!-- ********** Hero Area End ********** -->
 
     <div class="main-content-wrapper section-padding-100">
@@ -51,44 +37,26 @@
                             <div class="tab-content" id="myTabContent">
 
                                 <div class="tab-pane fade show active" id="world-tab-1" role="tabpanel" aria-labelledby="tab1">
-                                    
-                                    <!-- Single Blog Post -->
-                                    <div class="single-blog-post post-style-4 d-flex align-items-center">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                        </div>
-                                        <!-- Post Content -->
-                                        <div class="post-content">
-                                            <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
-                                                <h5>Como usar o ReflectionParameter do PHP</h5>
-                                            </a>
-                                            <p>As classes Refletion... do PHP capacitam na geração automática de função a partir do conhecimento dos seus parâmetros ...</p>
-                                            <!-- Post Meta -->
-                                            <div class="post-meta">
-                                                <p><a href="{{ url('/blogs/developments/des0002') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <!-- Single Blog Post -->
-                                    <div class="single-blog-post post-style-4 d-flex align-items-center">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
-                                        </div>
-                                        <!-- Post Content -->
-                                        <div class="post-content">
-                                            <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
-                                                <h5>Implementando eventos com o padrão Observers</h5>
-                                            </a>
-                                            <p>O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso ...</p>
-                                            <!-- Post Meta -->
-                                            <div class="post-meta">
-                                                <p><a href="{{ url('/blogs/developments/des0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Mar 21, 2026 at 21:35 pm</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('partials.single_blog_post_4',[
+                                    'title' => 'Como usar o ReflectionParameter do PHP',
+                                    'shortText' => 'As classes Refletion... do PHP capacitam na geração automática de função a partir do conhecimento dos seus parâmetros',
+                                    'img' => asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png'),
+                                    'author' => 'Douglas G. De Souza',
+                                    'datePost' => 'Mar 21, 2026 at 21:35 pm',
+                                    'href' => url('/blogs/developments/des0002')
+                                    ])
+
+                                    <!-- Single Blog Post -->
+                                    @include('partials.single_blog_post_4',[
+                                    'title' => 'Implementando eventos com o padrão Observers',
+                                    'shortText' => 'O padrão Observers, do PHP, pode tornar-se um aliado principalmente quando falamos de Eventos, mas seu uso é mais do que isso',
+                                    'img' => asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png'),
+                                    'author' => 'Douglas G. De Souza',
+                                    'datePost' => 'Mar 21, 2026 at 21:35 pm',
+                                    'href' => url('/blogs/developments/des0003')
+                                    ])
 
                                 </div>
                             </div>
@@ -99,7 +67,7 @@
                 <!-- ========== Sidebar Area ========== -->
                 <div class="col-12 col-md-8 col-lg-4">
                     <div class="post-sidebar-area">
-                    
+
                         <!-- It's here -->
                         @include('partials.it_is_here', ['description' => 'Aqui ficam os detalhes quanto aos desenvolvimentos em andamento e que sempre visão alcançar alguma vantagem competitiva.'])
                         <!-- It's here -->
@@ -108,72 +76,35 @@
                         <div class="sidebar-widget-area">
                             <h5 class="title">Em Alta</h5>
                             <div class="widget-content">
-                                
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/developments/des0002') }}" class="headline">
-                                            <h5 class="mb-0">Como usar o ReflectionParameter do PHP</h5>
-                                        </a>
-                                    </div>
-                                </div>
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
-                                            <h5 class="mb-0">Implementando eventos com o padrão Observers</h5>
-                                        </a>
-                                    </div>
-                                </div>
+                                @include('partials.single_blog_post_2',[
+                                'href' => url('/blogs/developments/des0002'),
+                                'title' => 'Como usar o ReflectionParameter do PHP',
+                                'img' => asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png'),
+                                ])
+
+                                <!-- Single Blog Post -->
+                                @include('partials.single_blog_post_2',[
+                                'href' => url('/blogs/developments/des0003'),
+                                'title' => 'Implementando eventos com o padrão Observers',
+                                'img' => asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png'),
+                                ])
 
                             </div>
                         </div>
 
                         <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Fique Ligado</h5>
-                            <div class="widget-content">
-                                <div class="social-area d-flex justify-content-between">
-                                    <a href="https://www.facebook.com/ti.douggs"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/douglas.gsouza/"><i class="fa fa-instagram"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCNeHQB_iUNs4wiXHeeDx5bw"><i class="fa fa-google"></i></a>
-                                    <a href="https://www.linkedin.com/company/dougg-ti"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        @include('partials.sidebar_widget_area')
+                        <!-- Widget Area -->
 
                         <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Escolha Do Dia</h5>
-                            <div class="widget-content">
-
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post todays-pick">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_des0003.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content px-0 pb-0">
-                                        <a href="#" class="headline">
-                                            <h5>Implementando eventos com o padrão Observers</h5>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                        @include('partials.single_blog_post_today', [
+                        'img' => asset('img/blog-img/blog_douggs_img_carrossel_des0003.png'),
+                        'href' => url('/blogs/developments/des0003'),
+                        'title' => 'Implementando eventos com o padrão Observers'
+                        ])
+                        <!-- Widget Area -->
 
                     </div>
                 </div>

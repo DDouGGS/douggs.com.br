@@ -1,24 +1,10 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-    <title>DougGS TI - &amp; Blog</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-</head>
+<!-- ***** Head Area Start ***** -->
+@include('partials.head', ['title' => 'DougGS TI - Blog'])
+<!-- ***** Head Area End ***** -->
 
 <body>
     <!-- Preloader Start -->
@@ -37,14 +23,12 @@
     <div class="hero-area">
 
         <!-- Hero Slides Area -->
-        <div class="hero-slides owl-carousel">
-            <!-- Single Slide -->
-            <div class="single-hero-slide bg-img background-overlay" style="background-image: url(img/blog-img/bgs10.jpg);"></div>
-            <!-- Single Slide -->
-            <div class="single-hero-slide bg-img background-overlay" style="background-image: url(img/blog-img/bgs9.jpg);"></div>
-            <!-- Single Slide -->
-            <div class="single-hero-slide bg-img background-overlay" style="background-image: url(img/blog-img/bgs14.jpg);"></div>
-        </div>
+        @include('partials.hero_slides_caroussel', [
+        'imgA' => '/img/blog-img/bgs10.jpg',
+        'imgB' => '/img/blog-img/bgs9.jpg',
+        'imgC' => '/img/blog-img/bgs14.jpg'
+        ])
+        <!-- Hero Slides Area -->
 
         <!-- Hero Post Slide -->
         <div class="hero-post-area">
@@ -93,6 +77,8 @@
                 </div>
             </div>
         </div>
+        <!-- Hero Post Slide -->
+
     </div>
     <!-- ********** Hero Area End ********** -->
 
@@ -198,7 +184,7 @@
                                 </ul>
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s" style="background-color: rgba(214, 155, 227, 0.63);">
+                                <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s" style="">
                                     <!-- Post Content -->
                                     <div class="post-content">
                                         <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
@@ -213,7 +199,7 @@
                                 </div>
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s" style="background-color: rgba(214, 155, 227, 0.63);">
+                                <div class="single-blog-post post-style-4 d-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s" style="">
                                     <!-- Post Content -->
                                     <div class="post-content">
                                         <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
@@ -252,46 +238,22 @@
                             <div class="widget-content">
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
-                                            <h5 class="mb-0">Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
-                                        </a>
-                                    </div>
-                                </div>
+                                @include('partials.single_blog_post_2_session',[
+                                'href' => url('/blogs/strategies/str0003'),
+                                'title' => 'Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart'
+                                ])
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des002.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/developments/des0002') }}" class="headline">
-                                            <h5 class="mb-0">Como usar o ReflectionParameter do PHP</h5>
-                                        </a>
-                                    </div>
-                                </div>
+                                @include('partials.single_blog_post_2_session',[
+                                'href' => url('/developments/des0002'),
+                                'title' => 'Como usar o ReflectionParameter do PHP'
+                                ])
 
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_des003.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/developments/des0003') }}" class="headline">
-                                            <h5 class="mb-0">Implementando eventos com o padrão Observers</h5>
-                                        </a>
-                                    </div>
-                                </div>
+                                @include('partials.single_blog_post_2_session',[
+                                'href' => url('/blogs/developments/des0003'),
+                                'title' => 'Implementando eventos com o padrão Observers'
+                                ])
 
                             </div>
                         </div>

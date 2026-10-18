@@ -12,15 +12,16 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     // Evento de inicio para o controlador de resposta
-    public function onInitingControllerResponse(object &$paramn)
+    public function onInitingControllerResponse(&$paramn)
     {
+        // registra início da resposta para a requisição
         return true;
     }
 
     // Evento de saída para o controlador de resposta
-    public function onEndingControllerResponse(object &$param)
+    public function onEndingControllerResponse(&$param)
     {
+        // registra resposta da requisição
         return true;
     }
-
 }
