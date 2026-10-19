@@ -1,23 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-    <title>DougGS TI - &amp; Infraestruturas</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-</head>
+<!-- ***** Head Area Start ***** -->
+@include('partials.head', ['title' => 'DougGS TI - Infraestruturas'])
+<!-- ***** Head Area End ***** -->
 
 <body>
     <!-- Preloader Start -->
@@ -29,28 +15,22 @@
     <!-- Preloader End -->
 
     <!-- ***** Header Area Start ***** -->
-    @include('partials.header')
+    @include('partials.header', ['category' => 'belows'])
     <!-- ***** Header Area End ***** -->
 
     <!-- ********** Hero Area Start ********** -->
-    <div class="hero-area height-400 bg-img background-overlay" style="background-image: url({{asset('img/blog-img/blog_douggs_img_category_developments_01.png')}});"></div>
+    @include('partials.hero',['img' => '/img/blog-img/blog_douggs_img_category_belows.png'])
     <!-- ********** Hero Area End ********** -->
 
-    <div class="regular-page-wrap section-padding-100">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8">
-                    <div class="page-content">
-                        <h1>Em Breve</h1>
-                        <p>Estamos preparando uma ótima matéria e em breve estará disponível aqui.</p>
-                        <p>Se quiser, pode entrar em contato pelo email <a href="mailto:mail@douggs.com.br">mail@douggs.com.br</a></p>
-                        <p>Atenciosamente,</p>
-                        <p>DougGS</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('partials.regular_page',[
+    'title' => 'Em Breve',
+    'text' => '<p>Estamos preparando uma ótima matéria e em breve estará disponível aqui.</p>
+    <p>Se quiser, pode entrar em contato pelo email <a href="mailto:mail@douggs.com.br">mail@douggs.com.br</a></p>
+    <p>Atenciosamente,</p>
+    <p>DougGS</p>',
+    'author' => 'Douglas G. De Souza',
+    'date' => ''
+    ])
 
     <!-- ***** Footer Area Start ***** -->
     @include('partials.footer')

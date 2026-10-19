@@ -1,23 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-     @include('partials.title', ['title' => 'Estratégias'])
-    <!-- Title  -->
-
-    <!-- Favicon  -->
-    <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-</head>
+<!-- ***** Head Area Start ***** -->
+@include('partials.head', ['title' => 'DougGS TI - Estratégias'])
+<!-- ***** Head Area End ***** -->
 
 <body>
     <!-- Preloader Start -->
@@ -33,7 +19,7 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ********** Hero Area Start ********** -->
-    <div class="hero-area height-400 bg-img background-overlay" style="background-image: url('/img/blog-img/blog_douggs_img_category_strategies.png');"></div>
+    @include('partials.hero',['img' => '/img/blog-img/blog_douggs_img_category_strategies.png'])
     <!-- ********** Hero Area End ********** -->
 
     <div class="main-content-wrapper section-padding-100">
@@ -45,31 +31,22 @@
                         <!-- Catagory Area -->
                         <div class="world-catagory-area">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                <li class="title">Desenvolvimentos</li>
+                                <li class="title">Estratégias</li>
                             </ul>
 
                             <div class="tab-content" id="myTabContent">
 
                                 <div class="tab-pane fade show active" id="world-tab-1" role="tabpanel" aria-labelledby="tab1">
-                                    
+
                                     <!-- Single Blog Post -->
-                                    <div class="single-blog-post post-style-4 d-flex align-items-center">
-                                        <!-- Post Thumbnail -->
-                                        <div class="post-thumbnail">
-                                            <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
-                                        </div>
-                                        <!-- Post Content -->
-                                        <div class="post-content">
-                                            <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
-                                                <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
-                                            </a>
-                                            <p>Além de facilitar o desenvolvimento um sistema de linguagem pode simplificar o trato com vários tipos de textos dentro no desenvolvimento ...</p>
-                                            <!-- Post Meta -->
-                                            <div class="post-meta">
-                                                <p><a href="{{ url('/blogs/strategies/str0003') }}" class="post-author">Douglas G. De Souza</a> on <a href="#" class="post-date">Maio 14, 2026 at 20:15 pm</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('partials.single_blog_post_4',[
+                                    'title' => 'Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart',
+                                    'shortText' => 'Além de facilitar o desenvolvimento um sistema de linguagem pode simplificar o trato com vários tipos de textos dentro no desenvolvimento',
+                                    'img' => asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png'),
+                                    'author' => 'Douglas G. De Souza',
+                                    'datePost' => 'Maio 14, 2026 at 20:15 pm',
+                                    'href' => url('/blogs/strategies/str0003')
+                                    ])
 
                                 </div>
                             </div>
@@ -89,56 +66,28 @@
                         <div class="sidebar-widget-area">
                             <h5 class="title">Em Alta</h5>
                             <div class="widget-content">
-                                
+
                                 <!-- Single Blog Post -->
-                                <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content">
-                                        <a href="{{ url('/blogs/strategies/str0003') }}" class="headline">
-                                            <h5 class="mb-0">Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
-                                        </a>
-                                    </div>
-                                </div>
+                                @include('partials.single_blog_post_2',[
+                                'href' => url('/blogs/strategies/str0003'),
+                                'title' => 'Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart',
+                                'img' => asset('img/blog-img/blog_douggs_img_thumbs_list_str0003.png')
+                                ])
 
                             </div>
                         </div>
 
                         <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Fique Ligado</h5>
-                            <div class="widget-content">
-                                <div class="social-area d-flex justify-content-between">
-                                    <a href="https://www.facebook.com/ti.douggs"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://www.instagram.com/douglas.gsouza/"><i class="fa fa-instagram"></i></a>
-                                    <a href="https://www.youtube.com/channel/UCNeHQB_iUNs4wiXHeeDx5bw"><i class="fa fa-google"></i></a>
-                                    <a href="https://www.linkedin.com/company/dougg-ti"><i class="fa fa-linkedin"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        @include('partials.sidebar_widget_area')
+                        <!-- Widget Area -->
 
                         <!-- Widget Area -->
-                        <div class="sidebar-widget-area">
-                            <h5 class="title">Escolha Do Dia</h5>
-                            <div class="widget-content">
-                                <!-- Single Blog Post -->
-                                <div class="single-blog-post todays-pick">
-                                    <!-- Post Thumbnail -->
-                                    <div class="post-thumbnail">
-                                        <img src="{{ asset('img/blog-img/blog_douggs_img_carrossel_str0003.png') }}" alt="">
-                                    </div>
-                                    <!-- Post Content -->
-                                    <div class="post-content px-0 pb-0">
-                                        <a href="#" class="headline">
-                                            <h5>Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart</h5>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('partials.single_blog_post_today', [
+                        'img' => asset('img/blog-img/blog_douggs_img_carrossel_str0003.png'),
+                        'href' => url('/blogs/strategies/str0003'),
+                        'title' => 'Sistema de Linguagem - Minha primeira lib mobile para Flutter & Dart'
+                        ])
+                        <!-- Widget Area -->
 
                     </div>
                 </div>
