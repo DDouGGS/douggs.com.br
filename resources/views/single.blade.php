@@ -1,23 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Title  -->
-    <title>DougGS TI - &amp; Blog Simples</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-</head>
+<!-- ***** Head Area Start ***** -->
+@include('partials.head', ['title' => 'DougGS TI - Blog Simples'])
+<!-- ***** Head Area End ***** -->
 
 <body>
     <!-- Preloader Start -->
@@ -99,7 +85,7 @@
                         <div class="sidebar-widget-area">
                             <h5 class="title">Em Alta</h5>
                             <div class="widget-content">
-                                
+
                                 <!-- Single Blog Post -->
                                 <div class="single-blog-post post-style-2 d-flex align-items-center widget-post">
                                     <!-- Post Thumbnail -->
@@ -296,7 +282,7 @@
                                     </li>
                                 </ol>
                             </li>
-                            
+
                             <!-- Single Comment Area -->
                             <li class="single_comment_area">
                                 <!-- Comment Content -->
@@ -309,7 +295,7 @@
                                     <p>Pick the yellow peach that looks like a sunset with its red, orange, and pink coat skin, peel it off with your teeth. Sink them into unripened...</p>
                                 </div>
                             </li>
-                            
+
                         </ol>
                     </div>
                 </div>

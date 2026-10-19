@@ -31,3 +31,11 @@ Route::get('/blogs/{category}/{page}', [BlogsController::class, 'page']);
 
 // Blogs
 Route::get('/blogs/{categorys}', [BlogsController::class, 'categorys']);
+
+// Login
+Route::get('/enter', [BlogsController::class, 'enter']);
+Route::post('/enter', [BlogsController::class, 'enter']);
+
+// Registration
+Route::get('/registration', [BlogsController::class, 'registration']);
+Route::post('/registration', [BlogsController::class, 'registration']);

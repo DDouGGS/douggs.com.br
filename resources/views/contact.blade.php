@@ -1,23 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<!-- ***** Head Area Start ***** -->
+@include('partials.head', ['title' => 'DougGS TI - Contato'])
+<!-- ***** Head Area End ***** -->
 
-    <!-- Title  -->
-    <title>DougGS TI - &amp; Contato</title>
-
-    <!-- Favicon  -->
-    <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
-
-    <!-- Style CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-</head>
 
 <body>
     <!-- Preloader Start -->
@@ -36,11 +23,11 @@
     <div class="hero-area height-400 bg-img background-overlay" style="background-image: url('/img/blog-img/blog_douggs_img_category_contacts.png');"></div>
     <!-- ********** Hero Area End ********** -->
     @if(@isset($send) && $send)
-        <section class="contact-area">
-            <div class="alert alert-success" role="alert" style="display: flex; justify-content: center; align-items: center;">
-                Seu e-mail foi enviado com sucesso.
-            </div>
-        </section>
+    <section class="contact-area">
+        <div class="alert alert-success" role="alert" style="display: flex; justify-content: center; align-items: center;">
+            Seu e-mail foi enviado com sucesso.
+        </div>
+    </section>
     @endif
     <section class="contact-area section-padding-100">
         <div class="container">
